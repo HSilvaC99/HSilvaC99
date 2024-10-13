@@ -1,0 +1,35 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const Experiences = [
+  {
+    date: "Proximamente [ Ene 2025 ]",
+    title: "Desarrollador RPA - Minsait",
+    description: "Prácticas curriculares como desarrollador RPA en Minsait.",
+    link: "https://www.minsait.com/es",
+  },
+  {
+    date: "Sep 2019 - May 2020",
+    title: "Desarrollador RPA - EnterDev",
+    description:
+      "Desarrollador RPA en EnterDev, automatizando procesos a clientes.",
+    link: "https://enterdev.co/",
+  },
+  {
+    date: "Sep 2017 - Jun 2024",
+    title: "Computer Science and Business Administration",
+    description:
+      "Graduado en Ingeniería Informática y Administración de Empresas en la Universidad Complutense de Madrid.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {
+    Experiences.map((experience) => (
+      <li class="my-16 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
